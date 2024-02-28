@@ -5,4 +5,8 @@ resources:
   - namespace.yaml
   - repository.yaml
   - release.yaml
+configMapGenerator:
+  - name: argocd-values
+    files:
+      - values.yaml=argo-values.yaml
 

@@ -7,7 +7,7 @@
       interval: 5m
       chart:
         spec:
-          version: "6.4.1"
+          version: "6.4.x"
           chart: argo-cd
           sourceRef:
             kind: HelmRepository
@@ -17,18 +17,8 @@
         crds: Create
       upgrade:
         crds: CreateReplace
-      values:
-        alertmanager:
-          enabled: false
-        prometheus:
-          prometheusSpec:
-            retention: 24h
-            resources:
-              requests:
-                cpu: 200m
-                memory: 200Mi
-            podMonitorNamespaceSelector: {}
-            podMonitorSelector:
-              matchLabels:
-                app.kubernetes.io/component: argocd
+      valuesFrom:
+      - kind: ConfigMap
+        name: argocd-values
+
     
