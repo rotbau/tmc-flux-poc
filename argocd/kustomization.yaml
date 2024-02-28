@@ -17,6 +17,7 @@ resources:
 - ./redis
 - ./notification
 - ./applicationset-controller
+- ./crds
 
 patches:
 - path: overlays/argocd-server-service.yaml
