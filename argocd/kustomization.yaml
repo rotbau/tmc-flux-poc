@@ -21,5 +21,5 @@ resources:
 patches:
 - path: overlays/argocd-server-service.yaml
   target:
-    namespace: argocd
-    labelSelector: app.kubernetes.io/name=argocd-server
+    kind: Service
+    labelSelector: "app.kubernetes.io/name=argocd-server"
