@@ -17,5 +17,5 @@ resources:
 - ./notification
 - ./applicationset-controller
 
-patches:
-- path: overlays/argocd-server-service.yaml
+#patches:
+#- path: overlays/argocd-server-service.yaml
