@@ -17,3 +17,9 @@ spec:
         kind: HelmRepository
         name: istio
   interval: 60m
+  values:
+    autoscaling:
+      enabled: false
+      minReplicas: 1
+      maxReplicas: 3
+      targetCPUUtilizationPercentage: 80
