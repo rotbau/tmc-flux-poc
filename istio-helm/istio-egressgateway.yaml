@@ -31,11 +31,9 @@ spec:
           name: https
           targetPort: 8443
           protocol: TCP
-
         labels:
           app: istio-egressgateway
           istio: egressgateway
-
         replicaCount: 1
         rollingMaxSurge: 100%
         rollingMaxUnavailable: 25%
