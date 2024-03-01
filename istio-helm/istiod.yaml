@@ -16,7 +16,7 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: istio
-      interval: 1h0m0s
+      interval: 60m
       values:
         global:
           istioNamespace: istio-system

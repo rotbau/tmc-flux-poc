@@ -19,4 +19,4 @@ spec:
         kind: HelmRepository
         name: istio
         namespace: istio-system
-      interval: 1h0m0s
+      interval: 60m
