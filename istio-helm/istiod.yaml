@@ -20,8 +20,8 @@ spec:
   values:
     global:
       istioNamespace: istio-system
-      proxy:
-        resources:
-          requests:
-            cpu: 10m
-            memory: 16Mi
+        proxy:
+          resources:
+            requests:
+              cpu: 10m
+              memory: 16Mi
