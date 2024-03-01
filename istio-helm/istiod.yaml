@@ -17,11 +17,3 @@ spec:
         kind: HelmRepository
         name: istio
   interval: 60m
-  values:
-    global:
-      istioNamespace: istio-system
-        proxy:
-          resources:
-            requests:
-              cpu: 10m
-              memory: 16Mi
