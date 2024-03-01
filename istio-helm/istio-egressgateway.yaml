@@ -1,0 +1,51 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: istio-egress-gateway
+  namespace: istio-system
+  labels:
+    app.kubernetes.io/part-of: istio
+spec:
+  releaseName: istio-gateway
+  dependsOn:
+    - name: istio-base
+    - name: istiod
+  chart:
+    spec:
+      version: 1.19.7
+      chart: gateway
+      sourceRef:
+        kind: HelmRepository
+        name: istio
+  interval: 60m
+  values:
+    gateways:
+      istio-egressgateway:
+        name: istio-egressgateway
+        ports:
+        - port: 80
+          targetPort: 8080
+          name: http2
+          protocol: TCP
+        - port: 443
+          name: https
+          targetPort: 8443
+          protocol: TCP
+
+        labels:
+          app: istio-egressgateway
+          istio: egressgateway
+
+        replicaCount: 1
+        rollingMaxSurge: 100%
+        rollingMaxUnavailable: 25%
+        autoscaleEnabled: false
+        autoscaleMin: 1
+        autoscaleMax: 5
+        resources:
+          requests:
+            cpu: 100m
+            memory: 128Mi
+        cpu:
+          targetAverageUtilization: 80
+        type: ClusterIP 

@@ -8,6 +8,7 @@ resources:
   - istio-base.yaml
   - istiod.yaml
   - istio-gateway.yaml
+  - istio-egressgateway.yaml
 #postBuild:
 #  substituteFrom:
 #    - kind: ConfigMap
