@@ -4,6 +4,11 @@ namespace: istio-system
 resources:
   - namespace.yaml
   - repository.yaml
-  - helm-release-istio-base.yaml
-  - helm-release-istiod.yaml
+  - istio-base.yaml
+  - istiod.yaml
+  - istio-gateway.yaml
+postBuild:
+  substituteFrom:
+    - kind: ConfigMap
+      name: istio-version
 

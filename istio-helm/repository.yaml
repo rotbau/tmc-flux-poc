@@ -4,6 +4,8 @@
     metadata:
       name: istio
       namespace: istio-system
+      labels:
+        app.kubernetes.io/part-of: istio
     spec:
-      interval: 120m
+      interval: 60m
       url: https://istio-release.storage.googleapis.com/charts
