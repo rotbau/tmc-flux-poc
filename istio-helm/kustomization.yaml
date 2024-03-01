@@ -4,5 +4,6 @@ namespace: istio-system
 resources:
   - namespace.yaml
   - repository.yaml
-  - release.yaml
+  - helm-release-istio-base.yaml
+  - helm-release-istiod.yaml
 
