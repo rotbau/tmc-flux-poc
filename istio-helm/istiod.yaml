@@ -1,4 +1,4 @@
-apiVersion: helm.toolkit.fluxcd.io/v1beta1
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
   name: istiod
@@ -17,11 +17,11 @@ spec:
         kind: HelmRepository
         name: istio
       interval: 60m
-      values:
-        global:
-          istioNamespace: istio-system
-          proxy:
-            resources:
-              requests:
-                cpu: 10m
-                memory: 16Mi
+  values:
+    global:
+      istioNamespace: istio-system
+        proxy:
+          resources:
+            requests:
+              cpu: 10m
+              memory: 16Mi
