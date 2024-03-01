@@ -7,8 +7,8 @@ resources:
   - istio-version.yaml
   - istio-base.yaml
   - istio-gateway.yaml
-postBuild:
-  substituteFrom:
-    - kind: ConfigMap
-      name: istio-version
+#postBuild:
+#  substituteFrom:
+#    - kind: ConfigMap
+#      name: istio-version
 
