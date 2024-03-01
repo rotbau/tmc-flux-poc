@@ -1,12 +1,12 @@
 apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
-  name: istio-ingress-gateway
+  name: istio-ingressgateway
   namespace: istio-system
   labels:
     app.kubernetes.io/part-of: istio
 spec:
-  releaseName: istio-gateway
+  releaseName: istio-ingressgateway
   dependsOn:
     - name: istio-base
     - name: istiod
@@ -19,6 +19,9 @@ spec:
         name: istio
   interval: 60m
   values:
+    labels:
+      app: istio-ingressgateway
+      istio: ingressgateway
     autoscaling:
       enabled: false
       minReplicas: 1
