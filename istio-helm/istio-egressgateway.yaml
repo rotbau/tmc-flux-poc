@@ -19,25 +19,22 @@ spec:
         name: istio
   interval: 60m
   values:
-    istio-egressgateway:
-      name: istio-egressgateway
-      ports:
-      - port: 80
-        targetPort: 8080
-        name: http2
-        protocol: TCP
-      - port: 443
-        name: https
-        targetPort: 8443
-        protocol: TCP
-      labels:
-        app: istio-egressgateway
-        istio: egressgateway
-      replicaCount: 1
-      resources:
-        requests:
-          cpu: 100m
-          memory: 128Mi
-      cpu:
-        targetAverageUtilization: 80
-      type: ClusterIP 
+    name: istio-egressgateway
+    ports:
+    - port: 80
+      targetPort: 8080
+      name: http2
+      protocol: TCP
+    - port: 443
+      name: https
+      targetPort: 8443
+      protocol: TCP
+    labels:
+      app: istio-egressgateway
+      istio: egressgateway
+    replicaCount: 1
+    resources:
+      requests:
+        cpu: 100m
+        memory: 128Mi
+    type: ClusterIP 
