@@ -6,7 +6,6 @@ resources:
   - repository.yaml
   - istio-version.yaml
   - istio-base.yaml
-  - istiod.yaml
   - istio-gateway.yaml
 postBuild:
   substituteFrom:
