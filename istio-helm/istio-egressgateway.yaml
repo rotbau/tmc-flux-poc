@@ -13,7 +13,7 @@ spec:
   chart:
     spec:
 #      version: 1.20.3
-      version: ${version}
+      version: $version
       chart: gateway
       sourceRef:
         kind: HelmRepository
