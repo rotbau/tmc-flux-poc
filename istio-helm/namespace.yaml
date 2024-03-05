@@ -5,3 +5,4 @@
       name: istio-system
       labels:
         app.kubernetes.io/component: istio
+        pod-security.kubernetes.io/enforce: privileged
