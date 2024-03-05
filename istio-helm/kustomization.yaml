@@ -3,14 +3,15 @@ kind: Kustomization
 namespace: istio-system
 resources:
   - namespace.yaml
+  - istio-version.yaml
   - repository.yaml
   - istio-base.yaml
   - istiod.yaml
   - istio-gateway.yaml
   - istio-egressgateway.yaml
   - istio-cni.yaml
-#postBuild:
-#  substituteFrom:
-#    - kind: ConfigMap
-#      name: istio-version
+postBuild:
+  substituteFrom:
+    - kind: ConfigMap
+      name: istio-version
 
