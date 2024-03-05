@@ -13,7 +13,7 @@ spec:
     crds: CreateReplace
   chart:
     spec:
-      version: 1.19.7
+      version: 1.20.3
       chart: base
       sourceRef:
         kind: HelmRepository

@@ -4,7 +4,6 @@ namespace: istio-system
 resources:
   - namespace.yaml
   - repository.yaml
-  - istio-version.yaml
   - istio-base.yaml
   - istiod.yaml
   - istio-gateway.yaml
