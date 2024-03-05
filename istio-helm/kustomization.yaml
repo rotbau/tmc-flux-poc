@@ -11,7 +11,7 @@ resources:
   - istio-cni.yaml
 postBuild:
   substitue:
-    version: 1.19.3
+    chart_version: "1.19.3"
 #  substituteFrom:
 #    - kind: ConfigMap
 #      name: istio-version
