@@ -9,9 +9,10 @@ resources:
   - istio-gateway.yaml
   - istio-egressgateway.yaml
   - istio-cni.yaml
-#postBuild:
-#  substitute:
-#    chart_version: "'1.19.3'"
+spec:  
+  postBuild:
+    substitute:
+      chart_version: 1.19.7
 #  substituteFrom:
 #    - kind: ConfigMap
 #      name: istio-version

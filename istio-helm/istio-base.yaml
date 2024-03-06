@@ -14,7 +14,7 @@ spec:
   chart:
     spec:
 #      version: 1.20.3
-      version: 1.19.7
+      version: ${chart_version}
       chart: base
       sourceRef:
         kind: HelmRepository
