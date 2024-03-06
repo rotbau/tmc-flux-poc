@@ -12,7 +12,7 @@ spec:
   chart:
     spec:
 #      version: 1.20.3
-      version: "${chart_version}"
+      version: 1.19.7
       chart: istiod
       sourceRef:
         kind: HelmRepository
