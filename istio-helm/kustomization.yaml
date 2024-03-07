@@ -12,7 +12,7 @@ resources:
 spec:  
   postBuild:
     substitute:
-      chart_version: "1.19.7"
+      chart_version: "'1.19.7'"
 #  substituteFrom:
 #    - kind: ConfigMap
 #      name: istio-version
