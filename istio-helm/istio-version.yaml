@@ -7,3 +7,9 @@ spec:
   postBuild:
     substitute:
       chart_version: 1.19.7
+  prune: true
+  interval: 1m0s
+  sourceRef:
+    kind: GitRepository
+    name: fluxcd-poc
+    namespace: tanzu-continuousdelivery-resources
