@@ -3,7 +3,7 @@
     kind: HelmRepository
     metadata:
       name: istio
-      namespace: istio-system
+      namespace: tanzu-continuousdelivery-resources
       labels:
         app.kubernetes.io/part-of: istio
     spec:
