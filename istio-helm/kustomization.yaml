@@ -1,6 +1,6 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
-namespace: tanzu-continuousdelivery-resources
+namespace: istio-system
 resources:
   - namespace.yaml
   - repository.yaml
@@ -10,11 +10,4 @@ resources:
   - istio-gateway.yaml
   - istio-egressgateway.yaml
   - istio-cni.yaml
-#spec:  
-#  postBuild:
-#    substitute:
-#      chart_version: 1.19.7
-#  substituteFrom:
-#    - kind: ConfigMap
-#      name: istio-version
 
