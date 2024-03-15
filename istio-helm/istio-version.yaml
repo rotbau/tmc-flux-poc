@@ -11,5 +11,5 @@ spec:
   interval: 1m0s
   sourceRef:
     kind: GitRepository
-    name: fluxcd-poc
+    name: tmc-flux-poc
     namespace: tanzu-continuousdelivery-resources
