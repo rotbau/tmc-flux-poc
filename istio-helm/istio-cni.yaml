@@ -1,8 +1,7 @@
 apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
-  name: istio-cni
-  namespace: istio-system  
+  name: istio-cni 
   labels:
     app.kubernetes.io/part-of: istio
 spec:
