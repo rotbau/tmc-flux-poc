@@ -11,7 +11,8 @@ spec:
     - name: istio-base
   chart:
     spec:
-      version: ${chart_version}
+      version: 1.19.7
+#      version: ${chart_version}
       chart: istiod
       sourceRef:
         kind: HelmRepository

@@ -12,7 +12,8 @@ spec:
     - name: istiod
   chart:
     spec:
-      version: ${chart_version}
+      version: 1.19.7
+#      version: ${chart_version}
       chart: gateway
       sourceRef:
         kind: HelmRepository
