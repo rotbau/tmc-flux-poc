@@ -6,7 +6,7 @@ metadata:
 spec:
   postBuild:
     substitute:
-      chart_version: 1.19.7
+      chart_version: 1.20.3
   interval: 1m0s
   path: ./istio-helm
   prune: true
