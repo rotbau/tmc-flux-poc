@@ -6,7 +6,6 @@ metadata:
     app.kubernetes.io/part-of: istio
 spec:
   releaseName: istio-cni
-  targetNamespace: istio-system  
   install:
     crds: Create
   upgrade:
@@ -19,5 +18,4 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: istio
-        namespace: istio-system
   interval: 60m

@@ -6,7 +6,6 @@ metadata:
     app.kubernetes.io/part-of: istio
 spec:
   releaseName: istio-egressgateway
-  targetNamespace: istio-system  
   dependsOn:
     - name: istio-base
     - name: istiod
