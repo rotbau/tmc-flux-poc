@@ -4,8 +4,7 @@ namespace: vault
 resources:
 - ./namespace.yaml
 - ./repository.yaml
-- ./server
-- ./injector
+- ./vault.yaml
 
 configMapGenerator:
 - name: vault-dev-config
