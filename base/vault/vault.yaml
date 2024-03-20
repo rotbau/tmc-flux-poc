@@ -19,5 +19,5 @@ spec:
         name: vault
   valuesFrom:
   - kind: ConfigMap
-    name: vault-dev-config-c8cg5g76dm
+    name: vault-dev-config
   interval: 60m

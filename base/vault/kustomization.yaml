@@ -10,3 +10,5 @@ configMapGenerator:
 - name: vault-dev-config
   files:
     - values.yaml=config/dev-values.yaml
+configurations:
+  - kustomizeconfig.yaml
