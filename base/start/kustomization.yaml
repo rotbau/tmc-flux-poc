@@ -4,3 +4,4 @@ kind: Kustomization
 resources:
 - ./istio-kustomization.yaml
 - ./argo-kustomization.yaml
+- ./vault-kustomization.yaml
