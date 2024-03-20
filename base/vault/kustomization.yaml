@@ -9,4 +9,4 @@ resources:
 configMapGenerator:
 - name: vault-dev-config
   files:
-    - values.yaml=configs/dev-values.yaml
+    - values.yaml=config/dev-values.yaml
