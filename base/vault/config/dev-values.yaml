@@ -1029,7 +1029,7 @@ ui:
   publishNotReadyAddresses: true
   # The service should only contain selectors for active Vault pod
   activeVaultPodOnly: false
-  serviceType: "ClusterIP"
+  serviceType: "LoadBalancer"   #ClusterIP LoadBalancer
   serviceNodePort: null
   externalPort: 8200
   targetPort: 8200
@@ -1076,7 +1076,7 @@ csi:
   # With the driver and provider installed, you can mount Vault secrets into volumes
   # similar to the Vault Agent injector, and you can also sync those secrets into
   # Kubernetes secrets.
-  enabled: false
+  enabled: true
 
   image:
     repository: "hashicorp/vault-csi-provider"
