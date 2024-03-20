@@ -17,7 +17,7 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: vault
-  valueFrom:
+  valuesFrom:
   - kind: ConfigMap
     name: vault-dev-config  
   interval: 60m
